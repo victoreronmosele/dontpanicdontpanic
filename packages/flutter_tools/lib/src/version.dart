@@ -733,6 +733,9 @@ class VersionUpstreamValidator {
     'https://github.com/join-the-flock/flock.git',
     'git@github.com:join-the-flock/flock.git',
     'ssh://git@github.com/join-the-flock/flock.git',
+    'https://github.com/victoreronmosele/dontpanicdontpanic.git',
+    'git@github.com:victoreronmosele/dontpanicdontpanic.git',
+    'ssh://git@github.com/victoreronmosele/dontpanicdontpanic.git',
   ];
 
   // Strips ".git" suffix from a given string, preferably an url.
@@ -989,7 +992,7 @@ class GitTagVersion {
         globals.printTrace('Skipping request to fetchTags - on well known channel $channel.');
       } else {
         final String flutterGit =
-            platform.environment['FLUTTER_GIT_URL'] ?? 'https://github.com/join-the-flock/flock.git';
+            platform.environment['FLUTTER_GIT_URL'] ?? 'https://github.com/victoreronmosele/dontpanicdontpanic.git';
         _runGit('git fetch $flutterGit --tags -f', processUtils, workingDirectory);
       }
     }
